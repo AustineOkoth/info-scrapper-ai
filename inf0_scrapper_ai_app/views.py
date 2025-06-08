@@ -124,18 +124,15 @@ class InfoScrapperDefaultPage(viewsets.ModelViewSet):
         return f"""
             TASK:
             Analyze the following company information and provide a detailed report:
-            - Company Name: {company_name}
-            - Company URL: {company_url}
-            - Company Location: {company_location}
-
+            Formart the results to use html tags such that when rendered to the page they are beautifully displayed. Use <h5> for headings, <p> for paragraphs, and <ul><li> for lists.
+            
             INSTRUCTIONS:
-            1. Search for any publicly available information about this company
-            2. Verify if the name, URL, and location match known records
+            1. Search for any up to date publicly available information about this {company_name}
+            2. Verify if the {company_name}, {company_url}, and {company_location} match known records
             3. Check for any inconsistencies or red flags
             4. Provide a summary of your findings
 
             FORMAT:
-            - Start with "FINDINGS:" followed by your analysis
             - Clearly indicate if you found matching information, no information, or conflicting information
             - Be concise but thorough
 
