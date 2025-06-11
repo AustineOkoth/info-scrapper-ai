@@ -68,7 +68,7 @@ class InfoScrapperDefaultPage(viewsets.ModelViewSet):
                     "q": f"{company_name} was founded in which year and its headquarters",
                     })
                     headers = {
-                    'X-API-KEY': '8c3eae5e92134e6f7ac791ed00ce85c5d6f3778e',
+                    'X-API-KEY': 'replace_with_your_serper_api_key',
                     'Content-Type': 'application/json'
                     }
                     response_text = requests.request("POST", url, headers=headers, data=payload)
